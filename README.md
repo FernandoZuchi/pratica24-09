@@ -81,7 +81,7 @@ No terminal execute:
 ```prompt
 node server.js
 ```
-Abra o navegador e vá para http://localhost:8080/random-cat. Isso fará uma requisição à API do The Cat API e retornará uma imagem aleatória de um gato.
+Abra o navegador e vá para `http://localhost:8080/random-cat`. Isso fará uma requisição à API do The Cat API e retornará uma imagem aleatória de um gato.
 
 # **Configurando o Frontend com React JS**
 
@@ -96,6 +96,7 @@ npm install axios
 
 ## **Estrutura do projeto**
 
+```
 frontend/
 │
 ├── src/
@@ -106,6 +107,7 @@ frontend/
 │   ├── Index.css
 │   └── App.css
 └── package.json
+```
 
 ### **Componente CatImage**
 
@@ -120,7 +122,7 @@ const CatImage = () => {
 
   const fetchCatImage = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/random-cat');
+      const response = await axios.get('http://localhost:8080/random-cat');
       setImage(response.data[0].url);
     } catch (error) {
       console.error('Erro ao obter imagem de gato:', error);
