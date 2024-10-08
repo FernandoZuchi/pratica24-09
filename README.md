@@ -45,14 +45,14 @@ const api_key = "SUA_API_KEY"
 // Rota para obter/listar 🐈🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛🐈🐈‍⬛ (10 gatos)
 app.get('/random-cat', async(req,res) => {
   try {
-    // Consumindo a API de 🐈🐈‍⬛ com axios
+    // Consumindo a API com axios
     const response = await axios.get("https://api.thecatapi.com/v1/images/search?limit=10", {
       headers: {
         "x-api-key": api_key,
       },
     });
 
-    // Exibindo a resposta da requisição de 🐈gatos🐈‍⬛:
+    // Exibindo a resposta da requisição:
     res.json(response.data);
   } catch (erro) {
     console.log('Erro ao acessar API de 🐈🐈‍⬛: ', erro);
